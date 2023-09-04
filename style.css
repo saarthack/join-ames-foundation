@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:manuka;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    scale: 0.8;
+    background-color: #4e5b31;
+    /* background-image: url(https://join.ames-foundation.com/images/bg-texture.webp); */
+    border-radius: 5px;
+    /* background-color: lightseagreen; */
+    position: relative;
+}
+
+#texture{
+    height: 100%;
+    width: 100%;
+    background-image: url(./bg-texture.jpg);
+    opacity: 0.5;
+}
+#timer{
+    height: 8vw;
+    width: 18vw;
+    overflow: hidden;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 4%;
+    right: 2%;
+    color: #fff;
+    text-align: right;
+    /* background-color: red; */
+
+}
+
+#timer h1{
+    font-size: 7vw;
+    font-weight: 800;
+    transition-delay: 1s;
+    transition: all ease 0.8s;
+}
+
+
+#page1 button{
+    padding: 1.45vw 4.2vw;
+    font-size: 2.6vw;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition-delay: 1s;
+    transition: all ease 0.8s;
+    font-weight: 900;
+    /* margin-left: -5vw; */
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#page1 button:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    transition: all ease 0.5s;
+
+    left: 0;
+    bottom:-100%;
+}
+
+#page1 button span{
+    display: block;
+    position: relative;
+    z-index: 9;
+    transition: all ease 0.5s;
+
+}
+#page1 button:hover::after{
+    bottom: 0;
+}
+
+#page1 button:hover span{
+    color: #000;
+}

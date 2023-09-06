@@ -14,7 +14,7 @@ body {
     height: 100vh;
     width: 100%;
     scale: 0.8;
-    background-color: #4e5b31;
+    background-color: #241f11;
     /* background-image: url(https://join.ames-foundation.com/images/bg-texture.webp); */
     border-radius: 5px;
     /* background-color: lightseagreen; */
@@ -26,6 +26,7 @@ body {
     width: 100%;
     background-image: url(./bg-texture.jpg);
     opacity: 0.5;
+    position: absolute;
 }
 #timer{
     height: 8vw;
@@ -38,6 +39,7 @@ body {
     color: #fff;
     text-align: right;
     /* background-color: red; */
+    z-index: 99;
 
 }
 
@@ -66,30 +68,65 @@ body {
     overflow: hidden;
 }
 
-
-#page1 button:after{
+button::after{
     content: "";
-    position: absolute;
     height: 100%;
     width: 100%;
     background-color: #fff;
-    transition: all ease 0.5s;
-
+    position: absolute;
+    /* top: 0; */
+    bottom: -100%;
+    transition: all ease 0.4s;
     left: 0;
-    bottom:-100%;
 }
 
-#page1 button span{
-    display: block;
-    position: relative;
-    z-index: 9;
-    transition: all ease 0.5s;
-
-}
-#page1 button:hover::after{
+button:hover::after{
     bottom: 0;
 }
 
-#page1 button:hover span{
+button span{
+    position: relative;
+    transition: all ease 0.4s;
+    z-index: 9;
+}
+
+button:hover span{
     color: #000;
+}
+
+#content{
+    position: relative;
+    z-index: 9;
+    color: #fff;
+    padding: 4vw 4vw;
+    padding-top: 10vw;
+}
+
+#content h1{
+    font-family: manuka;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 20vw;
+    line-height: 18vw;
+}
+#content h1 span{
+    font-weight: 900;
+}
+
+#content #patti{
+    height: 40vw;
+    position: absolute;
+    top: 2%;
+    z-index: 8;
+    left: 26%;
+}
+
+#content #log{
+    height: 28vw;
+    position: absolute;
+    top: 7%;
+    rotate: 3deg;
+    z-index: 7;
+    left: 51%;
+    opacity: 0;
 }

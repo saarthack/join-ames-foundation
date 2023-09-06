@@ -1,6 +1,7 @@
 var timer = document.querySelector("#timer h1")
 var timerButton = document.querySelector("#timer button")
 
+var audio = new Audio("./insect-sound.mp3")
 
 var grow  = 0
 var int = setInterval(function(){
@@ -23,11 +24,15 @@ var int = setInterval(function(){
 
 
 timerButton.addEventListener("click",function(){
+    audio.play()
     gsap.to("#page1",{
         scale:1,
         duration:0.5
     })
     gsap.to("#timer",{
         opacity:0
+    })
+    gsap.to("#log",{
+        opacity:1
     })
 })

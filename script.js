@@ -80,11 +80,45 @@ function loadingAnimation() {
       delay: 0.5,
       duration: 0.5,
     });
-    gsap.to("#main", {
-      overflow: "auto",
+    gsap.to("body", {
+      overflowY: "auto",
+      paddingTop:"0vw"
     });
   });
 }
 
+function textAnimation(){
+  var clutter = ""
+  var h1Text = document.querySelector("#page3-part1 h1").textContent
+  var splitedText = h1Text.split("")
+  splitedText.forEach(function(elem){
+    clutter += `<span>${elem}</span>`
+  })
+  document.querySelector("#page3-part1 h1").innerHTML = clutter
+
+  var tl = gsap.timeline({
+    scrollTrigger:{
+      trigger:"#page3",
+      scroller:"body",
+      start:"top 0%",
+      end:"top -100%",
+      pin:true,
+      scrub:2,
+      markers:true
+    }
+  })
+  tl.to("#page3-part1 h1 span",{
+      color:"#000",
+      stagger:0.1,
+  })
+  tl.to("#page3-part1",{
+    transform:"translateX(-100vw)"
+  },"anim1")
+  tl.to("#page3-part2",{
+    transform:"translateX(-100vw)"
+  },"anim1")
+}
+textAnimation()
 loadingAnimation();
-loco()
+// loco()
+

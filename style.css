@@ -9,8 +9,10 @@ body {
     height: 100%;
     width: 100%;
 }
-#main{
-    overflow: hidden;
+body{
+    padding-top: 0vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 #nav{
     width: 100%;
@@ -193,4 +195,40 @@ button:hover span{
     z-index: 9;
     left: 2%;
     object-fit: cover;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #F8F1EC;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+#page3::-webkit-scrollbar{
+    display: none;
+}
+#page3-part1{
+    height: 100vh;
+    width: 100vw;
+    padding: 5vw 5vw;
+    /* display: inline-block; */
+    flex-shrink: 0;
+}
+
+#page3-part1 h1{
+    font-size: 4.7vw;
+    color: #e3dbd5;
+    line-height: 5.5vw;
+}
+#page3-part2{
+    flex-shrink: 0;
+
+    height: 100vh;
+    width: 100vw;
+    padding: 5vw 5vw;
+    /* display: inline-block; */
 }

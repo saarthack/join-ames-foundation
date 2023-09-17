@@ -1,3 +1,14 @@
+@font-face {
+    font-family: manuka;
+    src: url(./manuka-regular.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: manuka;
+    font-weight: 700;
+    src: url(./manuka-bold.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -217,18 +228,89 @@ button:hover span{
     padding: 5vw 5vw;
     /* display: inline-block; */
     flex-shrink: 0;
+    /* background-color: red; */
 }
 
 #page3-part1 h1{
     font-size: 4.7vw;
     color: #e3dbd5;
     line-height: 5.5vw;
+    font-weight: 600;
 }
 #page3-part2{
     flex-shrink: 0;
 
     height: 100vh;
-    width: 100vw;
+    width: 200vw;
+    /* background-color: blue; */
     padding: 5vw 5vw;
     /* display: inline-block; */
+}
+
+
+#page3-img1{
+    rotate: 5deg;
+}
+
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: #F8F1EC;
+}
+
+
+@media (max-width:600px) {
+    #timer{
+        height: 20vw;
+        padding-top: 4px;
+        /* background-color: red; */
+        width: 30vw;
+    }
+    
+    #timer h1{
+        font-size: 11vw;
+    }
+    
+    
+    #page1 button{
+        padding: 3vw 7.8vw;
+        font-size: 5vw;
+        border-radius: 2px;
+    }
+
+    #content{
+        position: relative;
+        z-index: 9;
+        color: #fff;
+        padding: 4vw 5vw;
+        padding-top: 18vw;
+    }
+    
+    #content h1{
+        font-family: manuka;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 30vw;
+        line-height: 28vw;
+    }
+
+    
+    #content #patti{
+        height: 48vw;
+        position: absolute;
+        top: 50%;
+        z-index: 8;
+        left: 24%;
+    }
+    
+    #content #log{
+        height: 40vw;
+        position: absolute;
+        top: 100%;
+
+        rotate: 0deg;
+        z-index: 7;
+        left: 1%;
+        opacity: 0;
+    }
 }
